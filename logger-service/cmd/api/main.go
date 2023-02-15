@@ -50,8 +50,11 @@ func main() {
 		Models: data.New(client),
 	}
 
-	// Start the gRPC server in its own GoRoutine
+	// Start the RPC server in its own GoRoutine
 	go app.rpcListen()
+
+	// Start the gRPC Server in its own GoRoutine
+	go app.gRPCListen()
 
 	// Regiser the RPC Server
 	err = rpc.Register(new(RPCServer))
