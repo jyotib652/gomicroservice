@@ -1,0 +1,10 @@
+the URI to login into MongoDB Compass:
+
+mongodb://admin:password@localhost:27017/logs?authSource=admin&readPreference=primary&appname=MongoDB%20Compass&directConnection=true&ssl=false
+
+here,
+admin = user
+password = password
+logs = database name
+
+And the rest starting from 'authSource' all the way to the end are required for MONGODB Compass and they are MONGODB Compass specific parameters
